@@ -115,3 +115,16 @@ func (gc *GradeCalculator) GetFinalGrade() string {
 
 	return "F"
 }
+
+// Step 5. Get the Pass/Fail grade
+func (gc *GradeCalculator) GetPassFailGrade() string {
+	letterGrade := gc.GetFinalGrade()
+
+	if letterGrade == "F" {
+		return "Fail"
+	} else if letterGrade == "D" {
+		return "Fail"
+	} else {
+		return "Pass"
+	}
+}

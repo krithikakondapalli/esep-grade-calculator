@@ -114,7 +114,7 @@ func TestPassingGrade(t *testing.T) {
 	gradeCalculator.AddGrade("exam 1", 70, Exam)
 	gradeCalculator.AddGrade("essay on ai ethics", 70, Essay)
 
-	actual_value := gradeCalculator.GetFinalGrade()
+	actual_value := gradeCalculator.GetPassFailGrade()
 
 	if expected_value != actual_value {
 		t.Errorf("Expected GetGrade to return '%s'; got '%s' instead", expected_value, actual_value)
@@ -130,7 +130,7 @@ func TestFailingGrade(t *testing.T) {
 	gradeCalculator.AddGrade("exam 1", 65, Exam)
 	gradeCalculator.AddGrade("essay on ai ethics", 60, Essay)
 
-	actual_value := gradeCalculator.GetFinalGrade()
+	actual_value := gradeCalculator.GetPassFailGrade()
 
 	if expected_value != actual_value {
 		t.Errorf("Expected GetGrade to return '%s'; got '%s' instead", expected_value, actual_value)
